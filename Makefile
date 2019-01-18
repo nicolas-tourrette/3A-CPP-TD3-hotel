@@ -1,8 +1,10 @@
 CC = g++
 CFLAGS = -Wall
 LDFLAGS =
-SRCS = main.cpp hotel.cpp chambre.cpp
-OBJFILES = main.o hotel.o chambre.o
+#SRCS = main.cpp hotel.cpp chambre.cpp reservation.cpp
+SRCS = $(wildcard *.cpp)
+#OBJFILES = main.o hotel.o chambre.o reservation.o
+OBJFILES = $(SRCS:.cpp=.o)
 TARGET = exe_hotel
 
 all: $(TARGET)

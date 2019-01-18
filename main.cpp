@@ -11,9 +11,11 @@
 
 #include "hotel.hpp"
 #include "chambre.hpp"
+#include "reservation.hpp"
 
 int main(){
-    Hotel au_bon_dodo(2, "Au Bon Dodo") ;
+    srand(time(NULL)) ;
+    /*Hotel au_bon_dodo(2, "Au Bon Dodo") ;
     cout << "L'hôtel créé se nomme : " << au_bon_dodo.getNom() << "." << endl ;
     cout << "L'hôtel créé a        : " << au_bon_dodo.getNombreChambres() << " chambres." << endl ;
     cout << au_bon_dodo << endl ;
@@ -32,7 +34,10 @@ int main(){
     au_bon_dodo2.setOccupation(2,3) ;
     au_bon_dodo2.getOccupation() ;
 
-    cout << au_bon_dodo2 << endl ;
+    cout << au_bon_dodo2 << endl ;*/
+
+    Reservation ma_reservation("M. GINHAC Dominique", 45, 18012019, 19012019) ;
+    cout << ma_reservation << endl ;
 
     return EXIT_SUCCESS ;
 }

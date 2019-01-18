@@ -127,7 +127,7 @@ void Hotel::setPrixChambre(int numero_chambre, float prix_chambre){
     m_chambres[numero_chambre-1].setPrixChambre(prix_chambre) ;
 }
 
-ostream& operator <<(ostream& flux, Hotel& un_hotel) {
+ostream& operator <<(ostream& flux, Hotel& un_hotel){
     flux << "\n-------------------------------------------" << endl ;
     flux << "Affichage de l'hôtel " << un_hotel.m_nom_hotel << " :" << endl ;
     flux << "   - Nombre de chambres        : " << un_hotel.m_nombre_chambres << endl ;

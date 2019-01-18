@@ -67,11 +67,11 @@ void Chambre::setPrixChambre(float prix_chambre){
     cout << "   - Nouveau prix de la chambre : " << m_prix_chambre << "€" << endl ;
 }
 
-ostream& operator <<(ostream& flux, Chambre& une_chambre) {
+ostream& operator <<(ostream& flux, Chambre& une_chambre){
     flux << "\n-------------------------------------------" << endl ;
-    cout << "Affichage de la chambre n°" << une_chambre.m_numero_chambre << " :" << endl ;
-    cout << "   - Type de chambre    : " << une_chambre.m_type_chambre << endl ;
-    cout << "   - Prix de la chambre : " << une_chambre.m_prix_chambre << "€" << endl ;
+    flux << "Affichage de la chambre n°" << une_chambre.m_numero_chambre << " :" << endl ;
+    flux << "   - Type de chambre    : " << une_chambre.m_type_chambre << endl ;
+    flux << "   - Prix de la chambre : " << une_chambre.m_prix_chambre << "€" << endl ;
 
     return flux ;
 }
