@@ -1,9 +1,9 @@
 CC = g++
 CFLAGS = -Wall
 LDFLAGS =
-SRCS = main.cpp hotel.cpp
-OBJFILES = main.o hotel.o
-TARGET = hotel
+SRCS = main.cpp hotel.cpp chambre.cpp
+OBJFILES = main.o hotel.o chambre.o
+TARGET = exe_hotel
 
 all: $(TARGET)
 

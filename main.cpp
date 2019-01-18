@@ -10,35 +10,29 @@
 //using namespace std ;
 
 #include "hotel.hpp"
+#include "chambre.hpp"
 
 int main(){
-    Hotel au_bon_dodo(4, 45.0, "Au Bon Dodo") ;
+    Hotel au_bon_dodo(2, "Au Bon Dodo") ;
     cout << "L'hôtel créé se nomme : " << au_bon_dodo.getNom() << "." << endl ;
     cout << "L'hôtel créé a        : " << au_bon_dodo.getNombreChambres() << " chambres." << endl ;
-    cout << "Une chambre coûte     : " << au_bon_dodo.getPrixChambres() << "€." << endl ;
-    cout << au_bon_dodo << endl ;
-    au_bon_dodo.setPrixChambres(50.0) ;
     cout << au_bon_dodo << endl ;
     cout << "Le chiffre d'affaire maximal journalier pour l'hôtel \"Au Bon Dodo\" est de " << au_bon_dodo.getChiffreAffaireMax() << "€." << endl ;
 
-    Hotel sans_nom(0, 256.0) ;
-    cout << sans_nom << endl ;
-    sans_nom.setNom("Sans sommeil") ;
-    sans_nom.setPrixChambres(120.0) ;
+    Chambre ma_chambre(101, "single", 45.0) ;
+    ma_chambre.setEtatChambre(2) ;
+    ma_chambre.setPrixChambre(150) ;
+    cout << ma_chambre << endl ;
 
-    au_bon_dodo.setOccupation(0,1) ;
-    au_bon_dodo.setOccupation(2,1) ;
-    au_bon_dodo.setOccupation(4,1) ;
-
+    au_bon_dodo.setOccupation(1,9) ;
     au_bon_dodo.getOccupation() ;
 
     Hotel au_bon_dodo2 = au_bon_dodo ;
-    au_bon_dodo2.setPrixChambres(45.0) ;
-    cout << au_bon_dodo2 << endl ;
+    au_bon_dodo2.setPrixChambre(2,70) ;
+    au_bon_dodo2.setOccupation(2,3) ;
     au_bon_dodo2.getOccupation() ;
-    cout << au_bon_dodo << endl ;
 
-    cout << "Le chiffre d'affaire réel de " << au_bon_dodo.getNom() << " est de " << au_bon_dodo.getChiffreAffaire() << "€." << endl ;
+    cout << au_bon_dodo2 << endl ;
 
     return EXIT_SUCCESS ;
 }

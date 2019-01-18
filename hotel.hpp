@@ -10,10 +10,11 @@
 #ifndef HOTEL_HPP
 #define HOTEL_HPP
 
-
+#include "chambre.hpp"
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -21,12 +22,11 @@ class Hotel{
     private:
     string m_nom_hotel ;
     int m_nombre_chambres ;
-    float m_prix_chambres ;
+    vector<Chambre> m_chambres ;
     float m_chiffre_affaire ;
-    int* m_occupation ;
 
     public:
-    Hotel(int nombre_chambres, float prix_chambres, string nom_hotel = "*VOID*") ;
+    Hotel(int nombre_chambres, string nom_hotel = "*VOID*") ;
     Hotel(const Hotel& un_hotel) ;
     ~Hotel() ;
     string getNom() const ;
@@ -34,10 +34,9 @@ class Hotel{
     int getNombreChambres() ;
     void setOccupation(int numero_chambre, int etat_occupation) ;
     void getOccupation() ;
-    float getPrixChambres() ;
-    void setPrixChambres(float prix_chambres) ;
     float getChiffreAffaireMax() ;
     float getChiffreAffaire() ;
+    void setPrixChambre(int numero_chambre, float prix_chambre) ;
 
     friend ostream& operator <<(ostream& flux, Hotel& un_hotel) ;
 } ;
